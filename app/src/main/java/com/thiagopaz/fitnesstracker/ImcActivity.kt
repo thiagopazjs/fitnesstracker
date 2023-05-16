@@ -23,7 +23,17 @@ class ImcActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.fields_messages, Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
+
+            val weight = editWeight.text.toString().toInt()
+            val height = editHeight.text.toString().toInt()
+
+            val result = calculateImc(weight, height)
         }
+    }
+
+    private fun calculateImc (weight: Int, height: Int): Double {
+        //peso /(altura *altura)
+        return  weight / ((height /100.0) * (height /100.0) )
     }
 
     private fun validate(): Boolean {
