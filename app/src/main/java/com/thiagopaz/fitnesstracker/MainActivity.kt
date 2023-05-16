@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         btnImc = findViewById(R.id.btn_imc)
 
         btnImc.setOnClickListener {
-            //navegar prox tela
+            //nav next screen
             val i = Intent(this, ImcActivity::class.java)
             startActivity(i)
         }
