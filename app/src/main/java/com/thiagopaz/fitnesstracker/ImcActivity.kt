@@ -2,6 +2,7 @@ package com.thiagopaz.fitnesstracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -20,7 +21,7 @@ class ImcActivity : AppCompatActivity() {
         val btnSend: Button = findViewById(R.id.btn_imc_send)
         btnSend.setOnClickListener {
             if (!validate()) {
-                Toast.makeText(this, R.string.fields_messages, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, R.string.fields_message, Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
 
@@ -28,6 +29,19 @@ class ImcActivity : AppCompatActivity() {
             val height = editHeight.text.toString().toInt()
 
             val result = calculateImc(weight, height)
+            Log.d("test", "resultant: $result")
+
+            val imcResponseId = imcResponse(result)
+            Toast.makeText(this,imcResponseId, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun imcResponse(imc: Double):Int {
+        if (imc< 15.0) {
+            return R.string.imc_severely_low_weight
+        }
+        else {
+            return  R.string.normal
         }
     }
 
