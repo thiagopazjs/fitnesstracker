@@ -36,19 +36,14 @@ class ImcActivity : AppCompatActivity() {
 
             val imcResponseId = imcResponse(result)
 
-            val dialog = AlertDialog.Builder(this)
+            AlertDialog.Builder(this)
+                .setTitle((getString(R.string.imc_response, result)))
+                .setMessage(imcResponseId)
+                .setPositiveButton(android.R.string.ok) { dialog, which ->
 
-            dialog.setTitle("Titulo teste")
-            dialog.setMessage(R.string.calc)
-            dialog.setPositiveButton("Texto Botão", object : DialogInterface.OnClickListener {
-                override fun onClick(dialog: DialogInterface?, which: Int) {
-                    TODO("Not yet implemented")
                 }
-
-            })
-
-            val d = dialog.create()
-            d.show()
+                .create()
+                .show()
         }
     }
 
