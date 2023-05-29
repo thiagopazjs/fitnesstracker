@@ -18,27 +18,6 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/btn_imc"-->
-<!--        android:background="@color/colorLightGray"-->
-<!--        android:paddingTop="10dp"-->
-<!--        android:paddingBottom="10dp"-->
-<!--        android:paddingStart="12dp"-->
-<!--        android:paddingEnd="12dp"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_height="wrap_content">-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/baseline_directions_run_24" />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/app_name" />-->
-
-<!--    </LinearLayout>-->
 
 </LinearLayout>
