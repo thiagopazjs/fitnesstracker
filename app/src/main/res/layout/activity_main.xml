@@ -12,6 +12,8 @@
 
         android:id="@+id/rv_main"
         android:layout_width="match_parent"
+        tools:listitem="@layout/main_item"
+        tools:itemCount="2"
         android:layout_height="match_parent" >
 
     </androidx.recyclerview.widget.RecyclerView>
